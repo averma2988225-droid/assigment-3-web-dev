@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* General CSS */
+        *{margin:0; padding:0; box-sizing:border-box;}
+        body{
+            font-family:"Poppins", sans-serif;
+            background:#f4f6f9;
+            color:#333;
+        }
+
+        header{
+            background:#1a73e8;
+            color:white;
+            padding:1.5rem;
+            text-align:center;
+        }
+
+        /* Navigation */
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:1.5rem;
+            background:#0d3b77;
+            padding:0.7rem;
+            flex-wrap:wrap;
+        }
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:500;
+            transition:0.3s;
+        }
+        nav a:hover{
+            color:#aee2ff;
+        }
+
+        /* Hero Section */
+        .hero{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:3rem 10%;
+            flex-wrap:wrap;
+        }
+        .hero h1{
+            font-size:2.5rem;
+        }
+        .hero span{
+            color:#1a73e8;
+            font-weight:bold;
+            animation:colorChange 2s infinite alternate;
+        }
+        @keyframes colorChange{
+            from{color:#1a73e8;}
+            to{color:#ff4d4d;}
+        }
+        .hero-img{
+            width:180px;
+            height:180px;
+            background:#ddd;
+            border-radius:50%;
+            margin-top:1rem;
+        }
+
+        /* About */
+        .about{
+            padding:2rem 10%;
+        }
+
+        /* Skills (Using Grid) */
+        .skills{
+            padding:2rem 10%;
+        }
+        .skills-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(160px,1fr));
+            gap:1rem;
+        }
+        .skill-box{
+            background:white;
+            padding:1rem;
+            border-radius:5px;
+            text-align:center;
+            transition:0.3s;
+        }
+        .skill-box:hover{
+            transform:scale(1.05);
+            box-shadow:0px 0px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Projects Grid */
+        .projects{
+            padding:2rem 10%;
+        }
+        .project-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+            gap:1rem;
+        }
+        .project-card{
+            background:white;
+            padding:1rem;
+            border-radius:5px;
+            transition:0.3s;
+        }
+        .project-card:hover{
+            box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Contact Section */
+        .contact{
+            padding:2rem 10%;
+        }
+        form input, form textarea{
+            width:100%;
+            margin:0.5rem 0;
+            padding:0.7rem;
+        }
+        form button{
+            background:#1a73e8;
+            color:white;
+            padding:0.7rem 1.2rem;
+            border:none;
+            margin-top:0.5rem;
+            cursor:pointer;
+            transition:0.3s;
+        }
+        form button:hover{
+            background:#0a49a3;
+        }
+
+        /* Footer */
+        footer{
+            text-align:center;
+            padding:1rem;
+            background:#1a73e8;
+            color:white;
+            margin-top:2rem;
+        }
+
+        /* Responsive */
+        @media(max-width:768px){
+            .hero{
+                text-align:center;
+                flex-direction:column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>My Portfolio</h2>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Hi, I'm <span>Ayush</span></h1>
+            <p>Full Stack Developer | Beginner | Learning Everyday</p>
+        </div>
+        <div class="hero-img"></div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I am a first year student learning Web Development. I enjoy coding and building small projects to improve my skills.</p>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Python</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+<section class="projects">
+    <h2>Projects</h2>
+    <p>(Some of my beginner-level real world work)</p>
+
+    <div class="project-grid">
+        <div class="project-card">DDOS-AI-DETECTOR<br><small>(Winner — Google Hackathon)</small></div>
+        <div class="project-card">UPI Fraud Detection Model</div>
+        <div class="project-card">MITRA (Mental Health Support App)</div>
+    </div>
+</section>
+
+    <!-- Contact -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message" rows="5"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ayush's Portfolio</p>
+
+</body>
+</html>
